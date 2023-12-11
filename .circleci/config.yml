@@ -34,6 +34,7 @@ jobs:
           image: backend
           tag: 1.0.0
           docker-context: .
+          dockerfile: "docker/Dockerfile"
       - docker/push:
           registry: ghcr.io/saimonwoidig/circle-ci
           image: frontend
@@ -52,6 +53,7 @@ jobs:
           image: frontend
           tag: 1.0.0
           docker-context: .
+          dockerfile: "docker/Dockerfile"
       - docker/push:
           registry: ghcr.io/saimonwoidig/circle-ci
           image: frontend
