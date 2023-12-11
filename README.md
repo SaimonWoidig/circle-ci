@@ -1,1 +1,2 @@
 # circle-ci
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main)
