@@ -1,2 +1,2 @@
 # circle-ci
-[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main.svg?style=shield)](https://dl.circleci.com/status-badge/redirect/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main.svg?style=shield&circle-token=ad30b0367d765ce69dd33f540d293151bb4ec081)](https://dl.circleci.com/status-badge/redirect/circleci/TgW2oGF1w5yaGneCXgLmyj/PLdUirXVa1GbgSsmz2xLTA/tree/main)
