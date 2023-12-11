@@ -12,9 +12,6 @@ jobs:
     steps:
       - checkout:
           path: ~/project
-      - run:
-          name: list folder (DEBUG)
-          command: ls -lah
       - go/load-cache
       - go/mod-download
       - run:
@@ -53,9 +50,6 @@ jobs:
     steps:
       - checkout:
           path: ~/project
-      - run:
-          name: list folder (DEBUG)
-          command: ls -lah
       - setup_remote_docker:
           docker_layer_caching: true
       - docker/build:
