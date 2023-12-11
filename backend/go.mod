@@ -1,3 +1,3 @@
-module github.com/SaimonWoidig/travis-ci/backend
+module github.com/SaimonWoidig/circle-ci/backend
 
 go 1.21
