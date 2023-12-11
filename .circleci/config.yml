@@ -11,6 +11,9 @@ jobs:
     working_directory: ~/project/backend
     steps:
       - checkout
+      - run:
+          name: list folder (DEBUG)
+          command: ls -lah
       - go/load-cache
       - go/mod-download
       - run:
@@ -46,8 +49,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Change to frontend directory
-          command: cd frontend
+          name: list folder (DEBUG)
+          command: ls -lah
       - docker/build:
           registry: ghcr.io/saimonwoidig/circle-ci
           image: frontend
