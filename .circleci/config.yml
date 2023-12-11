@@ -7,7 +7,7 @@ orbs:
 jobs:
   build-backend:
     docker:
-      - image: docker.io/library/golang:1.21.5-alpine
+      - image: cimg/go:1.21.5
     working_directory: ~/project/backend
     steps:
       - checkout:
