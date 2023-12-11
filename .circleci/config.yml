@@ -8,11 +8,9 @@ jobs:
   build-backend:
     docker:
       - image: docker.io/library/golang:1.21.5-alpine
+    working_directory: ~/project/backend
     steps:
       - checkout
-      - run:
-          name: Change to backend directory
-          command: cd backend
       - go/load-cache
       - go/mod-download
       - run:
@@ -20,19 +18,17 @@ jobs:
           command: go build -v -ldflags "-v -s -w -extldflags '-static'" -tags "osusergo,netgo" -trimpath -o dist/backend
       - go/save-cache
       - persist_to_workspace:
-          root: "backend"
+          root: "dist"
           paths:
-            - "dist/backend"
+            - "backend"
   containerize-backend:
     docker:
       - image: "cimg/base:stable"
+    working_directory: ~/project/backend
     steps:
       - checkout
       - attach_workspace:
-          at: "backend/dist/backend"
-      - run:
-          name: Change to backend directory
-          command: cd backend
+          at: "dist/backend"
       - docker/build:
           registry: ghcr.io/saimonwoidig/circle-ci
           image: backend
@@ -45,6 +41,7 @@ jobs:
   containerize-frontend:
     docker:
       - image: "cimg/base:stable"
+    working_directory: ~/project/frontend
     steps:
       - checkout
       - run:
